@@ -1,4 +1,4 @@
-#Droplet Provision Script
+# nginx + Unicorn Server Provisioning Script
 
 This script is designed to provision and configure a Digital Ocean droplet.
 It installs the following:
