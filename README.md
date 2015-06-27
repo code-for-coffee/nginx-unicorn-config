@@ -28,3 +28,30 @@ Finally, it creates a default `/var/www/app` directory for you to start with.
   5. That's it. Enjoy!
 
 This script has been tested on Ubuntu 14.04.
+
+## Starting Unicorn + Nginx
+
+Finally, you need to startup unicorn. To do so, browse to your app directory. Then, run Unicorn:
+
+- `unicorn -c unicorn.rb -D`
+
+Now you need to restart nginx.
+
+`service nginx restart`
+
+And that's it! Your server should be browsable by IP/domain on port 80 unless you modified the config scripts.
+
+## Nginx Quick Guide
+
+- `service nginx start` (starts the nginx server)
+- `service nginx stop` (stops the nginx server)
+- `service nginx restart` (restarts the nginx server)
+
+## Updated your app?
+
+Have you made changes to your app but don't see them?
+
+- `bundle` from your app directory.
+- Then, run: `unicorn -c unicorn.rb -D`
+- Finally, restart Nginx: `service nginx restart`
+
