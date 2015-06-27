@@ -15,6 +15,7 @@ Finally, it creates a default `/var/www/app` directory for you to start with.
 
 ##Important!
 
+  1. Remove the default configuration for nginx: `rm -v /etc/nginx/sites-available/default`
   1. You will need to create an nginx config file in `/etc/nginx/conf.d/default.conf`
   2. You will need to edit your Unicorn configuration file in `/var/www/app/unicorn.rb`
   3. Sample configuration files are included in this repository.
