@@ -30,9 +30,18 @@ Finally, it creates a default `/var/www/app` directory for you to start with.
 
 This script has been tested on Ubuntu 14.04.
 
-## Starting Unicorn + Nginx
+## Starting using Rack
 
-Finally, you need to startup unicorn. To do so, browse to your app directory. Then, run Unicorn:
+  1. Stop the Nginx service - `service nginx stop`
+  2. `bundle install` to install your required gems.
+  3. Run `bundle exec rackup -p 80 --host 0.0.0.0` to run your application.
+  4. To leave the server running after you logout, instead run `nohup bundle exec rackup -p 80 --host 0.0.0.0`
+
+## Starting using Unicorn + Nginx
+
+  1. Finally, you need to startup unicorn. 
+  2. Then run `bundle install` to install your gems. 
+  3. To do so, browse to your app directory. Then, run Unicorn:
 
 - `unicorn -c unicorn.rb -D`
 
