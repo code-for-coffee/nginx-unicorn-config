@@ -34,7 +34,6 @@ echo -e ""
 
 apt-get -y install postgresql
 apt-get -y install postgresql-contrib
-apt-get -y install libpq-dev
 
 echo -e ""
 echo -e "*** Postgres and dependancies are installed!"
@@ -43,14 +42,14 @@ echo -e ""
 sudo -u postgres createuser -s $USER
 createdb $USER
 touch ~/.psql_history
+apt-get -y install libpq-dev
 gem install pg
 
 echo -e ""
 echo -e "*** Postgres user and database created!"
 echo -e ""
 
-apt-get -y install aptitude
-aptitude -y install nginx
+apt-get -y install nginx
 
 echo -e ""
 echo -e "*** Nginx is installed!"
