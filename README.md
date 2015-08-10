@@ -23,7 +23,7 @@ Finally, it creates a default `/var/www/app` directory for you to start with.
 ##Running this script
 
   1. Log into your droplet.
-  2. Open a a new file in a text editor and copy the contents of setup_droplet.sh into it. Example: `nano setup.sh`
+  2. Open a a new file in a text editor and copy the contents of [Install.sh](https://github.com/code-for-coffee/nginx-unicorn-config/blob/master/provisioning_script/install.sh) into it. Example: `nano setup.sh`
   3. Update this file's permissions - `chmod u+x setup.sh`
   4. Run the script! `./setup.sh`
   5. That's it. Enjoy!
